@@ -66,6 +66,7 @@ module.exports = {
     },
     animation: {
       none: 'none',
+      blob: 'blob 7s infinite',
       spin: 'spin 1s linear infinite',
       ping: 'ping 1s cubic-bezier(0, 0, 0.2, 1) infinite',
       pulse: 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
@@ -476,6 +477,20 @@ module.exports = {
           animationTimingFunction: 'cubic-bezier(0,0,0.2,1)',
         },
       },
+      blob: {
+        "0%": {
+          transform: "translate(0px, 0px) scale(1)",
+        },
+        "33%": {
+          transform: "translate(30px, -50px) scale(1.2)",
+        },
+        "66%": {
+          transform: "translate(-20px, 20px) scale(0.8)",
+        },
+        "100%": {
+          transform: "translate(0px, 0px) scale(1)",
+        },
+      }
     },
     letterSpacing: {
       tighter: '-0.05em',
