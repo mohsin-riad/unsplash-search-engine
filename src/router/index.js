@@ -1,7 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Index from '../components/Index.vue'
 import Search from '../components/Search.vue'
-import Pagination from '../components/Pagination.vue'
 
 const routes = [
   {
@@ -12,14 +11,7 @@ const routes = [
       {
         path: '/',
         name: 'Search',
-        component: Search,
-        children: [
-          {
-            path: '/',
-            name: 'Pagination',
-            component: Pagination,
-          },
-        ]
+        component: Search
       },
     ]
   },
