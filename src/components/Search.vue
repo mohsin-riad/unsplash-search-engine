@@ -1,7 +1,12 @@
 <template>
     <div>
         <div class="text-center shadow-xl mt-2 bg-white opacity-50 rounded-xl mx-auto max-w-screen-sm">
-            <h2 class="font-semibold text-2xl text-gray-600 p-3">Unsplash Engine</h2>
+            <h2 class="font-semibold text-2xl text-gray-600 p-3">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-8 left-36 absolute h-8" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M4 5a2 2 0 00-2 2v8a2 2 0 002 2h12a2 2 0 002-2V7a2 2 0 00-2-2h-1.586a1 1 0 01-.707-.293l-1.121-1.121A2 2 0 0011.172 3H8.828a2 2 0 00-1.414.586L6.293 4.707A1 1 0 015.586 5H4zm6 9a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd" />
+                </svg>
+                 Search Engine
+                </h2>
             <hr>
             <input 
                 class="mt-2 mb-2 border font-serif rounded-r-none text-gray-500 border-gray-300 bg-white opacity-100 rounded-lg mx-auto max-w-xs p-1 text-center" 
