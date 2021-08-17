@@ -20,11 +20,12 @@
         <div v-if="total" class="text-center shadow-xl mt-2 bg-white opacity-70 rounded-xl mx-auto max-w-screen-sm">
             <h2 class="font-semibold text-2xl text-gray-600 p-3">Results for {{ search }} <p class="rounded-md max-w-min relative p-0.5 w-min text-xs bg-gray-200">{{ total }}</p></h2>
             <div class="flex flex-wrap justify-start">
-                <div v-for="pc in results" :key="pc" class="w-6/12 sm:w-4/12 px-4 mb-2">
+                <div v-for="pc in results" :key="pc" class="w-6/12 sm:w-4/12 px-4 mb-2 transform scale-75">
                     <img :src="pc.urls.thumb" :alt="results.description" class="shadow-3xl drop-shadow-2xl rounded max-w-full h-auto align-middle" :title=" results.description" />
                 </div>
             </div>
         </div>
+        <router-view/>
     </div>
 </template>
 
@@ -33,8 +34,9 @@ import axios from 'axios';
 export default {
     data() {
         return {
-            AuthId: "nutTYrbG4S6IaEJfnzrC5TikeJxGt5Wrg_bnEj-Nqq8",
+            accessKey: "nutTYrbG4S6IaEJfnzrC5TikeJxGt5Wrg_bnEj-Nqq8",
             search : "",
+            pageNo : "1",
             total : '',
             results: [{
                 id: "",
@@ -59,7 +61,7 @@ export default {
     },
     methods: {
         async onClick() {
-            const BaseURL = "https://api.unsplash.com/search/photos?query="+this.search+"&client_id="+this.AuthId;
+            const BaseURL = "https://api.unsplash.com/search/photos?page="+this.pageNo+"&query="+this.search+"&client_id="+this.accessKey;
             const response = await axios.get(BaseURL);
             const res = response.data;
             this.results = res.results;
