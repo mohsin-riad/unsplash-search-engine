@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Index from '../components/Index.vue'
-import Title from '../components/Title.vue'
+import Search from '../components/Search.vue'
 
 const routes = [
   {
@@ -10,8 +10,8 @@ const routes = [
     children: [
       {
         path: '/',
-        name: 'Title',
-        component: Title,
+        name: 'Search',
+        component: Search
       },
     ]
   },
