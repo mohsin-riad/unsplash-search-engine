@@ -1,12 +1,7 @@
 <template>
     <div>
-        <div class="text-center shadow-xl mt-2 bg-white opacity-50 rounded-xl mx-auto max-w-screen-sm">
-            <h2 class="font-semibold text-2xl text-gray-600 p-3">
-                <svg xmlns="http://www.w3.org/2000/svg" class="w-8 left-36 absolute h-8" viewBox="0 0 20 20" fill="currentColor">
-                    <path fill-rule="evenodd" d="M4 5a2 2 0 00-2 2v8a2 2 0 002 2h12a2 2 0 002-2V7a2 2 0 00-2-2h-1.586a1 1 0 01-.707-.293l-1.121-1.121A2 2 0 0011.172 3H8.828a2 2 0 00-1.414.586L6.293 4.707A1 1 0 015.586 5H4zm6 9a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd" />
-                </svg>
-                 Search Engine
-                </h2>
+        <div class="text-center shadow-xl mt-2 bg-white opacity-50 rounded-xl p-4 w-full 2xl:max-w-screen-2xl xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md max-w-sm mx-auto">
+            <h2 class="font-semibold text-2xl text-gray-600 p-3">Search Engine</h2>
             <hr>
             <input 
                 class="mt-2 mb-2 border font-serif rounded-r-none text-gray-500 border-gray-300 bg-white opacity-100 rounded-lg mx-auto max-w-xs p-1 text-center" 
@@ -21,8 +16,20 @@
                     </svg>
             </button>
         </div>
-
-        <div v-if="total" class="text-center shadow-xl mt-2 bg-white opacity-70 rounded-xl mx-auto max-w-screen-sm">
+        <div v-if="!total" class="text-center shadow-xl mt-2 bg-white opacity-30 rounded-xl p-4 w-full 2xl:max-w-screen-2xl xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md max-w-sm mx-auto">
+            <div class="w-6/12 p-2 xl:w-full 2xl:w-full lg:w-full md:w-full sm:w-full shadow-3xl">
+                <div class="animate-pulse bg-gray-300 h-full rounded-md p-2 flex space-x-4">
+                    <div class="flex-1 space-y-4 py-1">
+                        <div class="h-4 bg-gray-400 dark:bg-red-400 rounded w-3/4"></div>
+                        <div class="space-y-2">
+                            <div class="h-4 bg-gray-400 dark:bg-red-400 rounded"></div>
+                            <div class="h-4 bg-gray-400 dark:bg-red-400 rounded w-5/6"></div>
+                        </div>
+                    </div>
+                </div>                    
+            </div>
+        </div>
+        <div v-if="total" class="text-center shadow-xl mt-2 bg-white opacity-70 rounded-xl p-4 w-full 2xl:max-w-screen-2xl xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md max-w-sm mx-auto">
             <h2 class="font-semibold text-sm text-gray-600 p-3">{{ total }} Results for `{{ search }}` </h2>
             <div class="mb-2">
                 <button :disabled="pageNo == String(1)" @click="onClick('prev')" class="rounded-md bg-gray-300 text-gray-600 mr-1 mx-auto hover:bg-white hover:border-gray-400 border">
@@ -37,8 +44,19 @@
                 </button >
             </div>
             <div class="flex flex-wrap justify-start">
-                <div v-for="pc in results" :key="pc" class="w-6/12 sm:w-4/12 p-2">
-                    <img :src="pc.urls.thumb" :alt="results.description" class="shadow-3xl drop-shadow-2xl rounded max-w-full h-auto align-middle" :title=" results.description" />
+                <div v-for="pc in results" :key="pc" class="w-6/12  p-2">
+                    <img :src="pc.urls.regular" :alt="results.description" class="rounded-xl shadow-xl max-w-full  h-full w-full align-middle" :title=" results.description" />
+                </div>
+                <div class="w-6/12 p-2 xl:w-full 2xl:w-full lg:w-full md:w-full sm:w-full opacity-60 shadow-3xl">
+                    <div class="animate-pulse bg-gray-300 h-full rounded-md p-2 flex space-x-4">
+                        <div class="flex-1 space-y-4 py-1">
+                            <div class="h-4 bg-gray-400 dark:bg-red-400 rounded w-3/4"></div>
+                            <div class="space-y-2">
+                                <div class="h-4 bg-gray-400 dark:bg-red-400 rounded"></div>
+                                <div class="h-4 bg-gray-400 dark:bg-red-400 rounded w-5/6"></div>
+                            </div>
+                        </div>
+                    </div>                    
                 </div>
             </div>
         </div>
