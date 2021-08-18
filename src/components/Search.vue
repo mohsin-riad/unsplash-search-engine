@@ -24,7 +24,7 @@
             </div>
         </div>
         <div v-if="!total" class="text-center shadow-xl mt-2 bg-white opacity-30 rounded-xl p-4 w-full 2xl:max-w-screen-2xl xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md max-w-sm mx-auto">
-            <div class="w-6/12 p-2 xl:w-full 2xl:w-full lg:w-full md:w-full sm:w-full shadow-3xl">
+            <div class=" p-2 w-full shadow-3xl">
                 <div class="animate-pulse bg-gray-300 h-full rounded-md p-2 flex space-x-4">
                     <div class="flex-1 space-y-4 py-1">
                         <div class="h-4 bg-gray-400 dark:bg-red-400 rounded w-3/4"></div>
@@ -39,12 +39,12 @@
         <div v-if="total" class="text-center mt-2  bg-gray-200 transition-shadow bg-scroll shadow-2xl rounded-xl p-4 w-full 2xl:max-w-screen-2xl xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md max-w-sm mx-auto">
             <h2 class="font-semibold text-sm text-gray-600 p-3">{{ total }} Results for `{{ search }}` </h2>
             <div class="mb-2">
-                <button :disabled="pageNo == String(1)" @click="onClick('prev')" class="rounded-md bg-gray-300 text-gray-600 mr-1 mx-auto hover:bg-white hover:border-gray-400 border">
+                <button :disabled="pageNo == String(1)" @click="onClick('prev')" class="bg-gray-200 opacity-50 transition-shadow cursor-pointer p-1.5 relative rounded-md  text-gray-600 mr-1 mx-auto hover:bg-white hover:border-gray-300 inline-block border">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
                     </svg>
                 </button>
-                <button :disabled="pageNo == String(3)" @click="onClick('next')" class="rounded-md bg-gray-300 text-gray-600 ml-1 mx-auto hover:bg-white hover:border-gray-400 border">
+                <button :disabled="pageNo == String(3)" @click="onClick('next')" class="bg-gray-200 opacity-50 transition-shadow cursor-pointer p-1.5 relative rounded-md  text-gray-600 ml-1 mx-auto hover:bg-white hover:border-gray-400 inline-block border">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
                     </svg>
