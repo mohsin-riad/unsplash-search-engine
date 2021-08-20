@@ -82,7 +82,7 @@ import axios from 'axios';
 export default {
     data() {
         return {
-            accessKey: "nutTYrbG4S6IaEJfnzrC5TikeJxGt5Wrg_bnEj-Nqq8",
+            accessKey: "nutTYrbG4S6IaEJfnzrC5TikeJxGt5Wrg_bnEj-Nqq8", //do not use for personal project, Create yout own access key 
             search : "",
             pageNo : "1",
             total : '',
