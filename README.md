@@ -1,5 +1,17 @@
 # Photo Search Engine-Documentation
 
+## Installation
+```
+# clone repo
+git clone https://github.com/mohsin-riad/unsplash-search-engine.git
+
+# install dependencies
+npm install
+
+# serve with hot reload at localhost:8080
+npm run serve
+```
+
 ## Build
 > install Node Js(v8 engine) | dependency manager (npm)
 * setup: [NOdeJs LTS](https://nodejs.org/en/download/)
