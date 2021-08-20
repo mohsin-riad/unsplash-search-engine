@@ -1,6 +1,8 @@
 # Unsplash - Photo Search Engine 
 
-Responsive Image Search engine 
+Responsive Image Search Engine Created With Vue Js
+
+> [Live Preview](https://search-engine-vue.netlify.app/)
 
 ## Installation
 ```
@@ -15,7 +17,7 @@ npm run serve
 ```
 
 ---
-## Contributing on Vuemmerce
+## Contributing Rules
 
 Thanks for your interest!
 
@@ -35,8 +37,6 @@ If you have any questions, feel free to email me at [mohsin.riad.cse@gmail.com](
 ## Screenshot
 
 ![Unsplash - Photo Search Engine](screen1.png "Unsplash - Photo Search Engine Preview")
-
-**[Live](https://search-engine-vue.netlify.app/)**
 
 ---
 ## Build
