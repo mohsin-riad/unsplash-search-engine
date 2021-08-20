@@ -1,4 +1,6 @@
-# Photo Search Engine-Documentation
+# Unsplash - Photo Search Engine 
+
+Responsive Image Search engine 
 
 ## Installation
 ```
@@ -12,9 +14,34 @@ npm install
 npm run serve
 ```
 
+---
+## Contributing on Vuemmerce
+
+Thanks for your interest!
+
+> To contribute, please ensure that you have stable(LTS) Node.js and npm installed.
+
+Follow the steps below.
+
+1. Follow the [Installing](#Installation) instructions
+2. Check the open issues out
+3. Create your branch with a reference to the open issue
+4. Commit your changes
+5. Open a pull request
+
+If you have any questions, feel free to email me at [mohsin.riad.cse@gmail.com](mohsin.riad.cse@gmail.com)
+
+--- 
+## Screenshot
+
+![Unsplash - Photo Search Engine](screen1.png "Unsplash - Photo Search Engine Preview")
+
+**[Live](https://search-engine-vue.netlify.app/)**
+
+---
 ## Build
 > install Node Js(v8 engine) | dependency manager (npm)
-* setup: [NOdeJs LTS](https://nodejs.org/en/download/)
+* setup: [NodeJs LTS](https://nodejs.org/en/download/)
 ``` bash
 # select: vue 3, vue router, vuex
 vue create unsplash-search-engine
